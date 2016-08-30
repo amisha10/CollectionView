@@ -24,6 +24,7 @@
 		A73590741D74CFE600759820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73590731D74CFE600759820 /* Foundation.framework */; };
 		A73590761D74CFF100759820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73590751D74CFF100759820 /* UIKit.framework */; };
 		A73590791D75233900759820 /* CVSuppView.m in Sources */ = {isa = PBXBuildFile; fileRef = A73590781D75233900759820 /* CVSuppView.m */; };
+		A735907C1D75EA2B00759820 /* SCSSenderMessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A735907B1D75EA2B00759820 /* SCSSenderMessageViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		A73590751D74CFF100759820 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A73590771D75233900759820 /* CVSuppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSuppView.h; sourceTree = "<group>"; };
 		A73590781D75233900759820 /* CVSuppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSuppView.m; sourceTree = "<group>"; };
+		A735907A1D75EA2B00759820 /* SCSSenderMessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSSenderMessageViewCell.h; sourceTree = "<group>"; };
+		A735907B1D75EA2B00759820 /* SCSSenderMessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSSenderMessageViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 		A735903F1D74B18300759820 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A735907A1D75EA2B00759820 /* SCSSenderMessageViewCell.h */,
+				A735907B1D75EA2B00759820 /* SCSSenderMessageViewCell.m */,
 				A73590401D74B1A200759820 /* CVCell.h */,
 				A73590411D74B1A200759820 /* CVCell.m */,
 				A73590771D75233900759820 /* CVSuppView.h */,
@@ -232,6 +237,7 @@
 				A73590701D74CBF200759820 /* UIView+FLKAutoLayout.m in Sources */,
 				A73590421D74B1A200759820 /* CVCell.m in Sources */,
 				A73590791D75233900759820 /* CVSuppView.m in Sources */,
+				A735907C1D75EA2B00759820 /* SCSSenderMessageViewCell.m in Sources */,
 				A73590721D74CBF200759820 /* UIViewController+FLKAutoLayout.m in Sources */,
 				A735906E1D74CBF200759820 /* NSLayoutConstraint+FLKAutoLayoutDebug.m in Sources */,
 				A735906F1D74CBF200759820 /* UIView+FLKAutoLayoutPredicate.m in Sources */,

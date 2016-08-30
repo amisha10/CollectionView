@@ -72,59 +72,17 @@ static NSString * const kGreaterThanZero = @">=0@750";
     [self.containerView addSubview:titleLabel];
     [titleLabel alignTop:kEqualZero leading:@"10@750" bottom:kEqualZero trailing:@"-10@750" toView:self.containerView];
 
-
-//    NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:titleLabel
-//                                                                    attribute:NSLayoutAttributeTop
-//                                                                    relatedBy:NSLayoutRelationEqual
-//                                                                       toItem:self.contentView
-//                                                                    attribute:NSLayoutAttributeTop
-//                                                                   multiplier:1
-//                                                                     constant:0.0];
-//    NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:titleLabel
-//                                                                    attribute:NSLayoutAttributeLeading
-//                                                                    relatedBy:NSLayoutRelationEqual
-//                                                                       toItem:self.contentView
-//                                                                    attribute:NSLayoutAttributeLeading
-//                                                                   multiplier:1
-//                                                                     constant:0.0];
-//    NSLayoutConstraint *rightConstraint = [NSLayoutConstraint constraintWithItem:titleLabel
-//                                                                    attribute:NSLayoutAttributeTrailing
-//                                                                    relatedBy:NSLayoutRelationLessThanOrEqual
-//                                                                       toItem:self.contentView
-//                                                                    attribute:NSLayoutAttributeTrailing
-//                                                                   multiplier:1
-//                                                                     constant:0.0];
-//    NSLayoutConstraint *bottomConstraint = [NSLayoutConstraint constraintWithItem:titleLabel
-//                                                                    attribute:NSLayoutAttributeBottom
-//                                                                    relatedBy:NSLayoutRelationLessThanOrEqual
-//                                                                       toItem:self.contentView
-//                                                                    attribute:NSLayoutAttributeBottom
-//                                                                   multiplier:1
-//                                                                     constant:0.0];
-//
-//    NSLayoutConstraint *centerXConstraint = [NSLayoutConstraint constraintWithItem:titleLabel
-//                                                                       attribute:NSLayoutAttributeCenterX
-//                                                                       relatedBy:NSLayoutRelationEqual
-//                                                                          toItem:self.contentView
-//                                                                       attribute:NSLayoutAttributeCenterX
-//                                                                      multiplier:1
-//                                                                        constant:0.0];
-//    NSLayoutConstraint *centerYConstraint = [NSLayoutConstraint constraintWithItem:titleLabel
-//                                                                        attribute:NSLayoutAttributeCenterY
-//                                                                        relatedBy:NSLayoutRelationLessThanOrEqual
-//                                                                           toItem:self.contentView
-//                                                                        attribute:NSLayoutAttributeCenterY
-//                                                                       multiplier:1
-//                                                                         constant:0.0];
-//
-//    [self.contentView addConstraint:topConstraint];
-//    [self.contentView addConstraint:leftConstraint];
-//    [self.contentView addConstraint:rightConstraint];
-//    [self.contentView addConstraint:bottomConstraint];
-////    [self.contentView addConstraint:centerXConstraint];
-////    [self.contentView addConstraint:centerYConstraint];
-//
     self.titleLabel = titleLabel;
 
 }
+
+- (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
+    UICollectionViewLayoutAttributes *attributes = [layoutAttributes copy];
+    float desiredHeight = [self.contentView systemLayoutSizeFittingSize:UILayoutFittingExpandedSize].height;
+    CGRect frame = attributes.frame;
+    frame.size.height = desiredHeight;
+    attributes.frame = frame;
+    return attributes;
+}
+
 @end
