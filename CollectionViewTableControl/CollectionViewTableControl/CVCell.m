@@ -27,6 +27,8 @@ static NSString * const kGreaterThanZero = @">=0@750";
     self = [super initWithFrame:frame];
     if (self) {
         [self setUpView];
+        NSLog(@"Change in log");
+
     }
     return self;
 }

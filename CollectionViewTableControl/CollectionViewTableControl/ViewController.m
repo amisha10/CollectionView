@@ -120,7 +120,7 @@ static NSString * const kSuppKind = @"SeparatorView";
      cell.minimumHeight = 44.0;
     cell.backgroundImageviewColor = [UIColor blueColor];
     cell.messageTextLabel.text = cellData;
-
+    NSLog(@"Change in log");
     return cell;
 }
 
@@ -139,4 +139,15 @@ static NSString * const kSuppKind = @"SeparatorView";
     self.collectionView = nil;
 
 }
+
+- (void)addChangesNoOneCaresAbout {
+    NSLog(@"Change");
+    NSInteger a, b, c;
+    a = 10;
+    b = 20;
+    c = a+b;
+
+    NSLog(@"c :%ld",(long)c);
+}
+
 @end
